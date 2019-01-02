@@ -1,1 +1,9 @@
 hey this works!
+
+<% if user_signed_in? %>
+  <%= link_to current_user.username, user_path(current_user) %>
+  <%= link_to "sign out", sign_out_path %>
+<% end %>
+
+<%= link_to "register", register_path %>
+<%= link_to "sign in", sign_in_path %>
