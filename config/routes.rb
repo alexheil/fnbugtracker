@@ -12,4 +12,8 @@ Rails.application.routes.draw do
 
   resources :users, controller: 'users/users', only: [:show, :update]
 
+  resources :gamemodes, controller: 'gamemodes/gamemodes'
+
+  resources :bugs, controller: 'bugs/bugs'
+
 end
