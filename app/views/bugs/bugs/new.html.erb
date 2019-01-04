@@ -1,0 +1,25 @@
+<%= provide(:title, "Add A New Bug") %>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="form-container padding-vertical-large">
+
+      <div class="mid-text padding-bottom-large center">
+        Add a new bug
+      </div>
+
+      <div class="padding-bottom">
+        <%= form_for(@bug, url: bugs_path) do |f| %>
+          <%= render 'partials/errors/bug_errors' %>
+          <div class="field">
+            <%= f.text_field :title, placeholder: "Title", class: "text-field" %>
+          </div>
+          <div class="actions">
+            <%= f.submit "Create bug", class: "submit-button" %>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
