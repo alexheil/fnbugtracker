@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190104002429) do
+ActiveRecord::Schema.define(version: 20190104011450) do
+
+  create_table "bugs", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "gamemode_id"
+    t.string   "title"
+    t.text     "description"
+    t.text     "video_data"
+    t.text     "image_data"
+    t.integer  "status",      default: 0
+    t.string   "slug"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["gamemode_id"], name: "index_bugs_on_gamemode_id"
+    t.index ["user_id"], name: "index_bugs_on_user_id"
+  end
 
   create_table "gamemodes", force: :cascade do |t|
     t.string   "title"
