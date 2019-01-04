@@ -2,13 +2,13 @@ class Gamemode < ApplicationRecord
     extend FriendlyId
   friendly_id :title, use: :slugged
 
-  default_scope -> { order('categories.title ASC') }
+  default_scope -> { order('gamemodes.title ASC') }
 
   has_many :bugs
 
   validates :title, presence: true, length: { maximum: 100 }
-  validates :description, presence: true, length: { maximum: 1000 }
-  validates :image, presence: true
+  #validates :description, presence: true, length: { maximum: 1000 }
+  #validates :image, presence: true
 
   before_save :should_generate_new_friendly_id?, if: :title_changed?
   

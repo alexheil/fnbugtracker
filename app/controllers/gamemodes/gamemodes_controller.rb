@@ -8,7 +8,7 @@ class Gamemodes::GamemodesController < ApplicationController
 
   def show
     @gamemode = Gamemode.friendly.find(params[:id])
-    @videos = @gamemode.videos.popular.page params[:page]
+    # @bugs = @gamemode.bugs.popular.page params[:page]
   end
 
   def new
