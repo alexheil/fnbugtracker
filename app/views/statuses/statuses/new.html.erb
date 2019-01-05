@@ -1,0 +1,25 @@
+<%= provide(:title, "Create New Status") %>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="form-container padding-vertical-large">
+
+      <div class="mid-text padding-bottom-large center">
+        Create new status
+      </div>
+
+      <div class="padding-bottom">
+        <%= form_for(@status, url: statuss_path) do |f| %>
+          <%= render 'partials/errors/status_errors' %>
+          <div class="field">
+            <%= f.text_field :title, placeholder: "Title", class: "text-field" %>
+          </div>
+          <div class="actions">
+            <%= f.submit "Create status", class: "submit-button" %>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
