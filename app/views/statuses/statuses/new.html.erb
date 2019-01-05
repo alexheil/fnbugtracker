@@ -9,7 +9,7 @@
       </div>
 
       <div class="padding-bottom">
-        <%= form_for(@status, url: statuss_path) do |f| %>
+        <%= form_for(@status, url: statuses_path) do |f| %>
           <%= render 'partials/errors/status_errors' %>
           <div class="field">
             <%= f.text_field :title, placeholder: "Title", class: "text-field" %>

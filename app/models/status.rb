@@ -2,7 +2,7 @@ class Status < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  default_scope -> { order('gamemodes.title ASC') }
+  default_scope -> { order('statuses.title ASC') }
 
   has_many :bugs
 
