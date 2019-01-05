@@ -14,6 +14,16 @@
           <div class="field">
             <%= f.text_field :title, placeholder: "Title", class: "text-field" %>
           </div>
+          <div class="field">
+            <%= f.label :gamemode_id %>
+            <%= f.hidden_field :gamemode_id %>
+            <%= f.collection_select(:gamemode_id, Gamemode.all, :id, :title) %>
+          </div>
+          <div class="field">
+            <%= f.label :platform_id %>
+            <%= f.hidden_field :platform_id %>
+            <%= f.collection_select(:platform_id, Platform.all, :id, :title) %>
+          </div>
           <div class="actions">
             <%= f.submit "Create bug", class: "submit-button" %>
           </div>
