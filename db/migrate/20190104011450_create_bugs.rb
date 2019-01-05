@@ -7,7 +7,7 @@ class CreateBugs < ActiveRecord::Migration[5.0]
       t.text :description
       t.text :video_data
       t.text :image_data
-      t.integer :status, default: 0
+      t.integer :status, default: 00
       t.string :slug
 
       t.timestamps

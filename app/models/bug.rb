@@ -13,9 +13,13 @@ class Bug < ApplicationRecord
   enum status: [:not_know, :aware, :in_progress, :next_patch, :live]
 
   belongs_to :user
-  #belongs_to :gamemode
+  belongs_to :gamemode
+  belongs_to :platform
+  belongs_to :status
 
-  #validates :gamemode_id, presence: true
+  validates :gamemode_id, presence: true
+  validates :platform_id, presence: true
+  validates :status_id, presence: true
   validates :title, presence: true, length: { maximum: 255 }
   #validates :image_data, presence: true, unless: :image_data?
   #validates :video_data, presence: true, unless: :video_data?
