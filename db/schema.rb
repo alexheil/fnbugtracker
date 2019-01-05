@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 20190104224801) do
   create_table "bugs", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "gamemode_id"
+    t.integer  "status_id"
+    t.integer  "platform_id"
     t.string   "title"
     t.text     "description"
     t.text     "video_data"
@@ -24,6 +26,8 @@ ActiveRecord::Schema.define(version: 20190104224801) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.index ["gamemode_id"], name: "index_bugs_on_gamemode_id"
+    t.index ["platform_id"], name: "index_bugs_on_platform_id"
+    t.index ["status_id"], name: "index_bugs_on_status_id"
     t.index ["user_id"], name: "index_bugs_on_user_id"
   end
 

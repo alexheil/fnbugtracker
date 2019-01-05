@@ -3,11 +3,13 @@ class CreateBugs < ActiveRecord::Migration[5.0]
     create_table :bugs do |t|
       t.references :user
       t.references :gamemode
+      t.references :status
+      t.references :platform
       t.string :title
       t.text :description
       t.text :video_data
       t.text :image_data
-      t.integer :status, default: 00
+      t.integer :status, default: 0
       t.string :slug
 
       t.timestamps
