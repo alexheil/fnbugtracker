@@ -9,6 +9,7 @@ class Bugs::BugsController < ApplicationController
   def show
     @bug = Bug.friendly.find(params[:id])
   end
+  
 
   def new
     @bug = Bug.new
