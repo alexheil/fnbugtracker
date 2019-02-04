@@ -13,6 +13,7 @@ class Bugs::BugsController < ApplicationController
   def new
     @bug = Bug.new
   end
+  
 
   def create
     @bug = Bug.new(bug_params)
