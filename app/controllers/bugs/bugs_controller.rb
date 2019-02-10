@@ -14,6 +14,7 @@ class Bugs::BugsController < ApplicationController
     @bug = Bug.new
   end
   
+  
   def create
     @bug = Bug.new(bug_params)
     @bug.user_id = current_user.id
